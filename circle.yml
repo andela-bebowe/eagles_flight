@@ -2,7 +2,7 @@ deployment:
   staging:
     branch: master
     heroku:
-      appname: ladyb-diary
+      appname: eagles-flight
 machine:
   ruby:
     version: 2.2.3
