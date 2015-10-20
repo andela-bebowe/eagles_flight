@@ -3,6 +3,7 @@ ruby '2.2.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
+gem 'figaro'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass'
@@ -12,7 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-gem "mail", "2.1.3"
+gem "mail", "2.6.3"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
@@ -24,7 +25,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
-
+gem "coveralls", require: false
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -43,6 +44,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'simplecov'
   gem 'letter_opener'
+  gem 'capybara'
 end
 
 group :production do
