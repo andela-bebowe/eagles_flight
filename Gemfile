@@ -7,6 +7,7 @@ gem 'figaro'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass'
+gem 'materialize-sass'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
@@ -44,13 +45,15 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'simplecov'
   gem 'letter_opener'
+  gem 'factory_girl_rails'
   gem 'capybara'
+  gem 'database_cleaner'
 end
 
 group :production do
   gem 'pg'
-   gem 'rails_12factor'
-   gem 'puma', '2.11.1'
+  gem 'rails_12factor'
+  gem 'puma', '2.11.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
