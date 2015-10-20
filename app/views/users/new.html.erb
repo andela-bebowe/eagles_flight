@@ -1,0 +1,28 @@
+<%provide(:title, 'Sign Up')%>
+
+
+	<%= form_for @user do |f|%>
+	<%=render 'layouts/error_messages'%>
+		<%= f.label :name%>
+		<%= f.text_field :name, placeholder: "Enter name" , class: ""%>
+
+
+		<%= f.label :email%>
+		<%= f.email_field :email, placeholder: "Enter email" , class: ""%>
+
+
+
+		<%= f.label :password%>
+		<%= f.password_field :password, placeholder: "Enter password" , class: ""%>
+
+
+		<%= f.label :password_confirmation, "Confirm Password"%>
+		<%= f.password_field :password_confirmation, placeholder: "Re-enter password" , class: ""%>
+
+
+				<%= f.submit "Create my account", class: "" %>
+
+				<%= link_to "Log In", login_path, class: "" %>
+	<% end %>
+
+
