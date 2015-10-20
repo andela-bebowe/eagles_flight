@@ -1,0 +1,8 @@
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: ladyb-diary
+machine:
+  ruby:
+    version: 2.2.3
