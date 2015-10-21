@@ -5,6 +5,48 @@
         1,
         null
       ],
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/app/helpers/sessions_helper.rb": [
+        1,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null
+      ],
       "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/app/helpers/static_pages_helper.rb": [
         1,
         null
@@ -13,9 +55,24 @@
         1,
         null
       ],
-      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/app/controllers/static_pages_controller.rb": [
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/app/controllers/sessions_controller.rb": [
         1,
         1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
         null,
         null
       ],
@@ -24,6 +81,30 @@
         null,
         null,
         1,
+        1,
+        null
+      ],
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/controllers/static_pages_controller_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/app/controllers/static_pages_controller.rb": [
+        1,
+        1,
+        null,
         null
       ],
       "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/controllers/users_controller_spec.rb": [
@@ -61,6 +142,55 @@
         null,
         null
       ],
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/decorators/flight_decorator_spec.rb": [
+        1,
+        null,
+        1,
+        null
+      ],
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/app/decorators/flight_decorator.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/app/models/flight.rb": [
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/decorators/session_decorator_spec.rb": [
+        1,
+        null,
+        1,
+        null
+      ],
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/app/decorators/session_decorator.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
       "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/features/book_flight_spec.rb": [
 
       ],
@@ -69,6 +199,23 @@
       ],
       "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/features/register_spec.rb": [
 
+      ],
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/helpers/sessions_helper_spec.rb": [
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        null
       ],
       "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/helpers/static_pages_helper_spec.rb": [
         1,
@@ -124,6 +271,19 @@
         1,
         null
       ],
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/models/airline_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/app/models/airline.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/models/airport_spec.rb": [
         1,
         null,
@@ -133,27 +293,45 @@
       ],
       "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/app/models/airport.rb": [
         1,
+        1,
+        1,
+        1,
+        1,
         null
       ],
-      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/models/booking_spec.rb": [
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/models/flight_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/app/models/booking.rb": [
-        1,
-        null
-      ],
-      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/models/flyer_spec.rb": [
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/models/passenger_spec.rb": [
         1,
         null,
         1,
         1,
         null
       ],
-      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/app/models/flyer.rb": [
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/app/models/passenger.rb": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/models/plane_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/app/models/plane.rb": [
+        1,
+        1,
+        1,
         1,
         null
       ],
@@ -161,7 +339,7 @@
         1,
         null,
         1,
-        null,
+        1,
         null
       ],
       "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/app/models/user.rb": [
@@ -171,6 +349,29 @@
         1,
         1,
         1,
+        1,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        1,
+        0,
+        null,
         null
       ],
       "/rails/blessing_documents/workspace/checkpts/fly/eagles_flight/spec/routing/routes_spec.rb": [
@@ -218,6 +419,6 @@
         null
       ]
     },
-    "timestamp": 1445411850
+    "timestamp": 1445461551
   }
 }

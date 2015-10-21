@@ -11,19 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021060953) do
+ActiveRecord::Schema.define(version: 20151021195931) do
+
+  create_table "airlines", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "airports", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "bookings", force: :cascade do |t|
+  create_table "flights", force: :cascade do |t|
+    t.string   "destination_id"
+    t.string   "departure_id"
+    t.datetime "departure_date"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  create_table "passengers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "ssn"
+    t.string   "booking_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "flyers", force: :cascade do |t|
+  create_table "planes", force: :cascade do |t|
+    t.string   "name"
+    t.string   "owner_id"
+    t.string   "flight_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -31,11 +53,11 @@ ActiveRecord::Schema.define(version: 20151021060953) do
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
+    t.string   "ssn"
+    t.string   "booking_id"
+    t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
-    t.string   "password_digest"
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end
