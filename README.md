@@ -1,4 +1,4 @@
-# EaglesFlight
+# EaglesFlight [![Coverage Status](https://coveralls.io/repos/andela-bebowe/eagles_flight/badge.svg?branch=master&service=github)](https://coveralls.io/github/andela-bebowe/eagles_flight?branch=master)
 
 This is a web app that can be used for Flight Booking and Management within Nigeria.
 
