@@ -38,4 +38,3 @@ This is a web app that can be used for Flight Booking and Management within Nige
 
 * This web app was built using Ruby on Rails.
 * And a rich library of gems from Ruby gems, this will be included as time goes on.
-
