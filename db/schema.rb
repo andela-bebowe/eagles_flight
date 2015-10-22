@@ -11,26 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021195931) do
+ActiveRecord::Schema.define(version: 20151022003923) do
 
   create_table "airlines", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.decimal  "price",      precision: 8, scale: 2
   end
 
   create_table "airports", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "location"
   end
 
   create_table "flights", force: :cascade do |t|
     t.string   "destination_id"
     t.string   "departure_id"
     t.datetime "departure_date"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+    t.decimal  "price",          precision: 8, scale: 2
   end
 
   create_table "passengers", force: :cascade do |t|
@@ -58,6 +61,9 @@ ActiveRecord::Schema.define(version: 20151021195931) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "remember_digest"
   end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
 
 end

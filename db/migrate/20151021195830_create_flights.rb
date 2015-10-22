@@ -9,3 +9,4 @@ class CreateFlights < ActiveRecord::Migration
     end
   end
 end
+@todays_date = Time.now.strftime("%02d%02m%02y")
