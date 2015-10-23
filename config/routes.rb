@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root "static_pages#home"
 
+  get "flights" => "flights#new"
+
   get "signup" => "users#new"
 
   get "login" => "sessions#new"

@@ -1,0 +1,38 @@
+<%provide(:title, "Flights")%>
+<div class="form-wrapper">
+  <div class="row">
+     <%=form_for :flight, method: "get" do |f|%>
+     <%=f.fields_for :airport do |airport_form|%>
+      <div class="col s12">
+          <div class="row">
+            <div class="col s6">
+              <%=airport_form.label :departure_id, "From"%>
+              <%=airport_form.collection_select(:departure_id, Airport.locations, :name, :id )%>
+            </div>
+            <div class="col s6">
+              <%=airport_form.label :destination_id, "To"%>
+              <%=airport_form.collection_select(:destination_id, Airport.locations, :name, :id )%>
+              <%end%>
+            </div>
+          </div>
+      </div>
+      <div class="col s12">
+          <div class="row">
+            <div class="col s6">
+              <%=f.label :departure_date, "Flight Date"%>
+              <%=f.select_date :departure_date, options_from_collection_for_select(Flight.get_departure_date, :departure_date, date_separator: '/')%>
+            </div>
+            <div class="col s6">
+              <%=f.fields_for :booking do |booking_form|%>
+              <%=booking_form.label :no_of_passengers, "Number of Tickets"%>
+              <%=booking_form.number_select :no_of_passengers, value: 1, max: 5, min: 1%><%= f.number_field :age, class: "form-control", value: 18, min:6  %>
+            <%end%>
+            </div>
+          </div>
+      </div>
+      <div class="col s4 offset-s4">
+         <button type="submit" class="btn waves-light waves-effect">Submit</button>
+      </div>
+       <%end%>
+    </div>
+</div>

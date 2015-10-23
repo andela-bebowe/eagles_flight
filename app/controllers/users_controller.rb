@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       @current_user = user
       UserMailer.welcome_email(@user).deliver
       flash[:success] = "Welcome to Eagles Flight"
-      redirect_to @user
+      redirect_to root_url
     else
       render "new"
     end

@@ -10,7 +10,15 @@
 </head>
 <body>
   <%=render "layouts/header"%>
+  <% if flash[:notice].present? %>
+  <div>
+    <script type="text/javascript">
+        Materialize.toast("<%= flash[:notice]%>", 3000, "rounded");
+    </script>
+  </div>
+  <% end %>
   <div class="container">
+  <%=render "layouts/error_messages"%>
     <%= yield %>
     </div>
   <%=render "layouts/footer"%>
