@@ -5,7 +5,7 @@ class Airport < ActiveRecord::Base
   validates :location, presence: true
 
   def self.locations
-    Airport.pluck("DISTINCT location")
+    Airport.distinct.pluck(:location, :id)
     #Airport.collect_column(:location, :distinct => true, :conditions => {if :take_offs})
   end
 end

@@ -1,18 +1,17 @@
 <%provide(:title, "Flights")%>
 <div class="form-wrapper">
+  <h1>Search for a flight to that special city</h1>>
   <div class="row">
-     <%=form_for :flight, method: "get" do |f|%>
-     <%=f.fields_for :airport do |airport_form|%>
+     <%=form_for :flight, url:  root_path, method: "get" do |f|%>
       <div class="col s12">
           <div class="row">
             <div class="col s6">
-              <%=airport_form.label :departure_id, "From"%>
-              <%=airport_form.collection_select(:departure_id, Airport.locations, :name, :id )%>
+              <%=label_tag "From"%>
+              <%=select_tag :departure_id, options_for_select(@airports, params[:departure_id])%>
             </div>
             <div class="col s6">
-              <%=airport_form.label :destination_id, "To"%>
-              <%=airport_form.collection_select(:destination_id, Airport.locations, :name, :id )%>
-              <%end%>
+              <%=label_tag "To"%>
+              <%=select_tag :destination_id, options_for_select(@airports, params[:destination_id])%>
             </div>
           </div>
       </div>
@@ -20,12 +19,12 @@
           <div class="row">
             <div class="col s6">
               <%=f.label :departure_date, "Flight Date"%>
-              <%=f.select_date :departure_date, options_from_collection_for_select(Flight.get_departure_date, :departure_date, date_separator: '/')%>
+              <%=f.select :departure_date, options_for_select(@dates, params[:departure_date])%>
             </div>
             <div class="col s6">
               <%=f.fields_for :booking do |booking_form|%>
               <%=booking_form.label :no_of_passengers, "Number of Tickets"%>
-              <%=booking_form.number_select :no_of_passengers, value: 1, max: 5, min: 1%><%= f.number_field :age, class: "form-control", value: 18, min:6  %>
+              <%=booking_form.select :no_of_passengers, (1..5), value: 1%>
             <%end%>
             </div>
           </div>

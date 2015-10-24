@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  root "static_pages#home"
-
-  get "flights" => "flights#new"
+  root  "flights#index"
 
   get "signup" => "users#new"
 
@@ -12,4 +10,6 @@ Rails.application.routes.draw do
   get "logout" => "sessions#delete"
 
   resources :users
+  resources :flights
+  resources :bookings
 end

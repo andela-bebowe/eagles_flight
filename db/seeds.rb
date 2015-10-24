@@ -5,18 +5,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-def rand
-  rand = Random.new
+def randi
   rand(1..30)
 end
-date = Time.zone.now + (60*60*24*rand)
+date = Time.zone.now + randi.day
 
 user1 = User.create(name: "Blessing", email: "blessingebowe@gmail.com", ssn: "uk123", password_digest: "blessing")
 user1 = User.create(name: "Blessing", email: "blessing.ebowe@andela.com", ssn: "uk123", password_digest: "blessing")
 
-passenger1 = Passenger.create(name: "Blessing", email: "blessing.ebowe@andela.com", ssn: "uk123")
-passenger2 = Passenger.create(name: "Blessing", email: "blessing.ebowe@andela.com", ssn: "uk123")
+# passenger1 = Passenger.create(name: "Blessing", email: "blessing.ebowe@andela.com", ssn: "uk123")
+# passenger2 = Passenger.create(name: "Blessing", email: "blessing.ebowe@andela.com", ssn: "uk123")
 
 Airline.create(name: "Dana Air", price: 5000)
 Airline.create(name: "GIG Air", price: 2000)
@@ -26,13 +24,13 @@ Airline.create(name: "Eclypse Air", price: 4000)
 Airline.create(name: "Arik Air", price: 8000)
 
 6.times do
-Plane.create(name: "Boeing707", owner_id: 6,flight_id: rand)
-Plane.create(name: "Boeing797", owner_id: 5,flight_id: rand)
-Plane.create(name: "M55", owner_id: 4,flight_id: rand)
-Plane.create(name: "HM125", owner_id: 3,flight_id: rand)
-Plane.create(name: "Boeing790", owner_id: 3,flight_id: rand)
-Plane.create(name: "Boeing797", owner_id: 2,flight_id: rand)
-Plane.create(name: "Ericson", owner_id: 1,flight_id: rand)
+Plane.create(name: "Boeing707", owner_id: 6,flight_id: randi)
+Plane.create(name: "Boeing797", owner_id: 5,flight_id: randi)
+Plane.create(name: "M55", owner_id: 4,flight_id: randi)
+Plane.create(name: "HM125", owner_id: 3,flight_id: randi)
+Plane.create(name: "Boeing790", owner_id: 3,flight_id: randi)
+Plane.create(name: "Boeing797", owner_id: 2,flight_id: randi)
+Plane.create(name: "Ericson", owner_id: 1,flight_id: randi)
 end
 
 Airport.create(name: "Murtala", location: "Lagos")
