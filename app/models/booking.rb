@@ -6,6 +6,8 @@ class Booking < ActiveRecord::Base
   validates :no_of_passengers, presence: true
   validates :flight_id, presence: true
 
+  accepts_nested_attributes_for :passengers
+
   private
     def create_ticket_no
       self.ticket_no = self.id + 5000

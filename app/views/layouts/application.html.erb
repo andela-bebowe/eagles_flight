@@ -3,13 +3,14 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><%=yield(:title)%> | Eagles Flight</title>
-  <%= stylesheet_link_tag    'application', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    "application", "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
   <%=render "layouts/shim"%>
 </head>
 <body>
   <%=render "layouts/header"%>
+  <div class="container mini-body">
   <% if flash[:notice].present? %>
   <div>
     <script type="text/javascript">
@@ -21,6 +22,6 @@
   <%=render "layouts/error_messages"%>
     <%= yield %>
     </div>
-  <%=render "layouts/footer"%>
+    </div>
 </body>
 </html>

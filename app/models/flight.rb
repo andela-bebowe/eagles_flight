@@ -6,12 +6,13 @@ class Flight < ActiveRecord::Base
 
   accepts_nested_attributes_for  :bookings, allow_destroy: true
 
-  def get_departure_date
+  def self.get_date
     Flight.distinct.pluck(:departure_date)
   end
 
   def self.formatted_departure_date
-    get_departure_date.map{ |date|date.strftime("%d/%m/%Y")}
+    date = get_date
+    date.map{ |date|date.strftime("%d/%m/%y")}.uniq!
   end
 
   def self.search(params)

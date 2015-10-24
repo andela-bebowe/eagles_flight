@@ -1,2 +1,27 @@
 @import "materialize/components/color";
+$primary-color: color("blue", "darken-2") !default;
 @import "materialize";
+
+.mini-body{
+  padding-top: 70px;
+}
+.form-wrapper{
+  margin: 30px;
+  padding: 10px;
+   background-color: rgba(50,150,255,0.8);
+}
+  #head-view{
+}
+label{
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: -1px;
+}
+select{
+  display: block;
+}
+body {
+  background-image: url("http://www.hdwallpapers.in/download/airplane_wing-1440x900.jpg");
+  background-repeat: no-repeat;
+  }

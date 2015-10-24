@@ -6,6 +6,5 @@ class Airport < ActiveRecord::Base
 
   def self.locations
     Airport.distinct.pluck(:location, :id)
-    #Airport.collect_column(:location, :distinct => true, :conditions => {if :take_offs})
   end
 end
