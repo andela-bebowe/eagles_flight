@@ -7,9 +7,11 @@ Rails.application.routes.draw do
 
   post "login" => "sessions#create"
 
-  get "logout" => "sessions#delete"
+  get "logout" => "sessions#destroy"
 
   get "home" => "static_pages#home"
+
+  post "/auth/:provider/callback" => "sessions#create"
 
   resources :users
   resources :flights

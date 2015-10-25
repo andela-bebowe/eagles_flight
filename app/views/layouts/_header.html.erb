@@ -7,6 +7,8 @@
           <%if !logged_in?%>
          <li><a href="<%= signup_path%>">Sign Up</a></li>
          <li><a href="<%= login_path%>">Log In</a></li>
+         <li><%= link_to "Sign in with Twitter", "/auth/twitter" %></li>
+         <li><%= link_to "Sign in with Facebook", "/auth/facebook" %></li>
          <% else %>
          <li><a href="#">Booking History</a></li>
           <li><a href="<%= logout_path%>">Log Out</a></li>

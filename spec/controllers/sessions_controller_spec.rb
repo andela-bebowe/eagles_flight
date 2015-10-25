@@ -15,13 +15,11 @@ RSpec.describe SessionsController, type: :controller do
 
   describe "post request to sessions controller " do
     it "Not to be success for empty post" do
-      params[:user][:email] = nil
       post :create
       expect(response).not_to have_http_status(:success)
     end
 
     it "renders new for failed creation" do
-       params[:user][:email] = nil
       post :create
       expect(response).to render("new")
     end

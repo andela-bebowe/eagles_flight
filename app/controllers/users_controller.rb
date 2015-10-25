@@ -11,7 +11,6 @@ class UsersController < ApplicationController
     if @user.save
       log_in(@user)
       @current_user = @user
-      #UserMailer.welcome_email(@user).deliver
       flash[:success] = "Welcome to Eagles Flight"
       redirect_to root_url
     else

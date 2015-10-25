@@ -1,9 +1,10 @@
 FactoryGirl.define do
   factory :user do
-    name "MyString"
-  email "MyString"
-    nat_id "MyString"
-booking_id "MyString"
+  name "Ebowe Blessing"
+  email "bobs@gmail.com"
+  #nat_id "12546"
+  booking_id "5002"
+  password "mama"
   end
 
 end
