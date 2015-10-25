@@ -12,18 +12,18 @@ RSpec.describe "static_pages/home.html.erb", type: :view do
       view.content_for(:h1) { "Eagles Flight" }
     end
 
-     it "should have header and footer partials" do
+     it "should have header" do
       render
       within "body" do
-        view.should render_template(:partial => "layouts/footer")
         view.should render_template(:partial => "layouts/header")
       end
     end
-    it "should have a nav at the top" do
+    it "should have a nav at the top with some links" do
       render
       within "nav" do
         expect(rendered).to contain("Home")
-        expect(rendered).to contain("Sign-in")
+        expect(rendered).to contain("Sign In")
+        expect(rendered).to contain("Log Out")
       end
     end
   end

@@ -1,4 +1,5 @@
 <%provide(:title, 'Sign Up')%>
+<h4 class="center-align">Sign Up</h4>
 <div class="row form-wrapper">
   <%= form_for @user do |f|%>
       <div class="row">
@@ -26,10 +27,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col s3 offset-l4 l2">
-           <button type="submit" class="btn waves-light waves-effect">Sign up</button>
+        <div class="col s4 offset-s3 offset-l3 l4">
+           <button type="submit" class="btn waves-light waves-effect">Sign Up</button>
         </div>
-        <div class="col s3 l2">
+        <div class="col s4 l4">
             <%= link_to "Log In", login_path, class: "btn waves-effect waves-light"%>
         </div>
       </div>

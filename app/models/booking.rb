@@ -6,6 +6,7 @@ class Booking < ActiveRecord::Base
   validates :no_of_passengers, presence: true
   validates :flight_id, presence: true
 
+  has_many :passengers
   accepts_nested_attributes_for :passengers
 
   private

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get "logout" => "sessions#delete"
 
+  get "home" => "static_pages#home"
+
   resources :users
   resources :flights
   resources :bookings

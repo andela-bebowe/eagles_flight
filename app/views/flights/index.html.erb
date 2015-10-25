@@ -46,12 +46,16 @@
     </div>
 </div>
 
+<div class="rendered-page">
 <% if params[:flight] && !@flight.nil? && params[:flight][:departure_id] != params[:flight][:destination_id]%>
+  <h4 class="center-align">Make a choice of Flight.</h4>
+  <div class="search-table">
   <%= form_tag new_booking_path, method: "get" do %>
     <%= hidden_field_tag :no_of_passengers,  params[:no_of_passengers] %>
-    <h2>Make a choice of Flight.</h2>
     <%= render "flights/flights"%>
    <% end %>
    <%elsif params[:send]%>
-   <p>Not available</p>
+   <h4 class="center-align">No Flights in this category</h4>
 <%end%>
+</div>
+</div>

@@ -8,7 +8,7 @@ $primary-color: color("blue", "darken-2") !default;
 .form-wrapper{
   margin: 30px;
   padding: 10px;
-   background-color: rgba(50,150,255,0.8);
+  background-color: rgba(50,150,255,0.8);
 }
   #head-view{
 }
@@ -26,8 +26,43 @@ body {
   background-repeat: no-repeat;
 }
 
-  .our-radio{
+.our-radio{
   position: relative !important;
   left: 0 !important;
   visibility: visible !important;
+}
+
+.search-table{
+  padding: 10px;
+  background-color: rgba(50,150,255,0.8);
+}
+
+.rendered-page{
+  margin-top: 50px;
+}
+.padded{
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.input-field label {
+  color: white;
+}
+input#user_name.validate{
+  border-bottom: 2px solid white;
+}
+input#user_email.validate{
+  border-bottom: 2px solid white;
+}
+input#user_password.validate{
+  border-bottom: 2px solid white;
+}
+input#user_password_confirmation.validate{
+  border-bottom: 2px solid white;
+}
+input#session_email.validate{
+  border-bottom: 2px solid white;
+}
+input#session_password.validate{
+  border-bottom: 2px solid white;
 }
