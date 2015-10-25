@@ -7,4 +7,8 @@ class Airport < ActiveRecord::Base
   def self.locations
     Airport.distinct.pluck(:location, :id)
   end
+
+  def  self.position(id)
+    Airport.where(id: id.to_i).pluck(:name)
+  end
 end

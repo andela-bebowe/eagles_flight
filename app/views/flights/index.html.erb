@@ -1,21 +1,20 @@
 <%provide(:title, "Flights")%>
-    <h4 class="center-align">Search for a flight to that special city</h4>
+<h4 class="center-align">Search for a flight to that special city</h4>
 <div class="form-wrapper">
   <div class="row">
      <%=form_for @flight_form, url:  root_path, method: "get" do |f|%>
-    <%= hidden_field_tag :search %>
       <div class="col s12">
           <div class="row">
             <div class="col s6">
-              <%=f.label :departure_id, "From"%>
+              <%=f.label :departure_id, "Your take off point?"%>
               <div class="collection">
-              <%=f.select :departure_id, options_for_select(@airports, params[:departure_id]), required: true, class: "collection-item"%>
+              <%=f.select :departure_id, options_for_select(@airports), required: true, class: "collection-item input-field"%>
               </div>
             </div>
             <div class="col s6">
-              <%=f.label :destination_id, "To"%>
+              <%=f.label :destination_id, "Your destination?"%>
               <div class="collection">
-              <%=f.select :destination_id, options_for_select(@airports, params[:destination_id]), required: true, class: "collection-item"%>
+              <%=f.select :destination_id, options_for_select(@airports), required: true, class: "collection-item input-field"%>
             </div>
             </div>
           </div>
@@ -24,16 +23,16 @@
       <div class="col s12">
           <div class="row">
             <div class="col s6">
-              <%=f.label :departure_date, "Flight Date"%>
+              <%=f.label :departure_date, "Your flight date?"%>
               <div class="collection">
-              <%=f.select :departure_date, options_for_select(@dates, params[:departure_date]), required: true, class: "collection-item"%>
-            </div>
+              <%=f.select :departure_date, options_for_select(@dates), required: true, class: "collection-item input-field"%>
+              </div>
             </div>
             <div class="col s6">
               <%=f.fields_for :booking do |booking_form|%>
-              <%=booking_form.label :no_of_passengers, "Number of Tickets"%>
+              <%=booking_form.label :no_of_passengers, "How many people?"%>
               <div class="collection">
-              <%=booking_form.select :no_of_passengers, (1..5), value: 1, required: true, class: "collection-item", params[:number]%>
+              <%=booking_form.select :no_of_passengers, options_for_select([[1,1], [2,2], [3,3], [4,4] ,[5,5]]), required: true, class: "input-field collection-item"%>
             </div>
             <%end%>
             </div>
@@ -41,16 +40,18 @@
       </div>
       <br/>
       <div class="center-align">
-         <button type="submit" name=nil class="btn waves-light waves-effect">SEARCH</button>
+         <button type="submit" name="send" class="btn waves-light waves-effect">SEARCH</button>
       </div>
        <%end%>
     </div>
 </div>
 
-<% if params[:search] && !@flight.empty? %>
+<% if params[:flight] && !@flight.nil? && params[:flight][:departure_id] != params[:flight][:destination_id]%>
   <%= form_tag new_booking_path, method: "get" do %>
-    <%= hidden_field_tag :no_of_passengers,  params[:number] %>
+    <%= hidden_field_tag :no_of_passengers,  params[:no_of_passengers] %>
     <h2>Make a choice of Flight.</h2>
     <%= render "flights/flights"%>
    <% end %>
+   <%elsif params[:send]%>
+   <p>Not available</p>
 <%end%>

@@ -1,8 +1,8 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
+
 # Examples:
-#
+
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # def randi
@@ -48,10 +48,10 @@
 # Airport.create(name: "Murtala", location: "Lagos")
 
 
-# Flight.create(destination_id: 7, departure_id: 2, departure_date: date3, price: 4000)
-# Flight.create(destination_id: 6, departure_id: 1, departure_date: date2, price: 2000)
+# Flight.create(destination_id: 7, departure_id: 2, departure_date: date, price: 4000)
+# Flight.create(destination_id: 6, departure_id: 1, departure_date: date, price: 2000)
 # Flight.create(destination_id: 5, departure_id: 7, departure_date: date, price: 9000)
-# Flight.create(destination_id: 4, departure_id: 6, departure_date: date2, price: 1000)
+# Flight.create(destination_id: 4, departure_id: 6, departure_date: date, price: 1000)
 # Flight.create(destination_id: 3, departure_id: 2, departure_date: date, price: 8000)
-# Flight.create(destination_id: 1, departure_id: 3, departure_date: date3, price: 7000)
-# Flight.create(destination_id: 2, departure_id: 4, departure_date: date2, price: 5000)
+# Flight.create(destination_id: 1, departure_id: 3, departure_date: date, price: 7000)
+# Flight.create(destination_id: 2, departure_id: 4, departure_date: date, price: 5000)

@@ -1,37 +1,46 @@
-<table class="bordered striped highlight centered responsive-table">
+<%flight = @flight%>
+<% num = params[:flight][:booking][:no_of_passengers].to_i %>
+<div class="row">
+  <div class="col s6 col l3 offset- 3">
+  <%#binding.pry%>
+    From: <%=Airport.position(params[:flight][:departure_id])%>
+  </div>
+  <div class="col s6 col l3 offset- 2">
+    To: <%=Airport.position(params[:flight][:destination_id])%>
+  </div>
+</div>
+
+<table class="bordered highlight responsive-table">
   <thead>
     <tr>
-        <th data-field="name">Airline</th>
-        <th data-field="name">Plane</th>
-        <th data-field="address">From</th>
-        <th data-field="address">To</th>
-        <th data-field="date">Date</th>
-        <th data-field="time">Time</th>
-        <th data-field="cost">Cost for <%=params[:number]%></th>
+        <th data-field="id">Id</th>
+        <th data-field="name">Airlines</th>
+        <th data-field="name">Planes</th>
+        <th data-field="date">Date of Departure</th>
+        <th data-field="time">Time of Departure</th>
+        <th data-field="cost">Price for <%=num%></th>
     </tr>
   </thead>
+    <tbody>
+     <% flight.each do |f|%>
+        <%Plane.plane_name(f.id).each do |plane|%>
+          <% airline_name = Airline.the_name%>
+          <%price = Airline.price%>
+          <% cost = (number_to_currency(((price.shift + f.price)* num), :unit => "$")) %>
+          <tr>
 
-  <tbody>
-    <tr>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-    </tr>
-    <tr>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+            <td></label><%= radio_button_tag :flight_id, f.id, true, class: "our-radio"%>
+            </td>
+            <td><%= airline_name.shift%></td>
+            <td><%= plane%></td>
+            <td><%=f.date%></td>
+            <td><%=f.time%></td>
+            <td><%=cost%></td>
+          </tr>
+        <%end%>
+      <%end%>
+    </tbody>
+  </table>
+<div class="center-align">
+   <button type="submit" name=nil class="btn waves-light waves-effect">SUBMIT</button>
+</div>
